@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Common Fragments</title>
+</head>
+<body>
+    <nav th:fragment="nav(user)">
+        <a href="/">Home</a>
+        <a th:unless="${user}" href="/login">Login</a>
+        <a th:if="${user}" href="/logout">Logout</a>
+    </nav>
+</body>
+</html>

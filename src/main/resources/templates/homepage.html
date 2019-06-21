@@ -6,5 +6,9 @@
 </head>
 <body>
     <h1>Pokemon!</h1>
+    <nav th:replace="fragments/common :: nav(user=${trainer})"></nav>
+    <!-- what if trainer is null? Bad things will happen -->
+    <h2 th:if="${trainer}">Welcome, [[${trainer.name}]]</h2>
+    <h3> The value for potato was <span th:text="${potato}"></span></h3>
 </body>
 </html>
